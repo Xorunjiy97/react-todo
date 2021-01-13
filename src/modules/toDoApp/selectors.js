@@ -1,0 +1,1 @@
+export const getAllTask = state => state.toDoReducer.tasks;

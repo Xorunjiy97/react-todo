@@ -1,4 +1,4 @@
-import ToDo from './modules/toDoApp/ToDoApp.jsx'
+import ToDo from './modules/toDoApp/'
 import './App.css';
 
 function App() {
