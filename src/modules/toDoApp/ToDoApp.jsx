@@ -3,12 +3,18 @@ import Tasks from "./components/Tasks.jsx";
 import './todoAppStyle.css'
 
 const ToDo = () => {
+    // handleClick = () => {
+
+    // }
+    // handleInput =() => {
+
+    // }
 
     return(
         <div className='container'>
             <h1>ToDo List :)</h1>
             <Tasks/>    
-
+        
         </div>
     )
 }
