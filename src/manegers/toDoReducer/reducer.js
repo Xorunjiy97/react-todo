@@ -14,7 +14,7 @@ export default(state = initialState,action) => {
         case constants.TASK_DONE:
             return {
                 ...state,
-                tasks: state.tasks.map(element => +action.payload === element.id ? { ...element, isCompleted: true }: element)                
+                tasks: state.tasks.map(element => +action.payload === element.id ? { ...element, isCompleted: element.isCompleted ? false : true }: element)
             }
         case constants.TASK_DELETE:
             return {

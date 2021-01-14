@@ -1,9 +1,9 @@
 import React,{ useState } from 'react';
-import { onSaveTask } from './actions.js';
-import Task from "./components/Task.jsx";
+import Task from "./components";
 import './todoAppStyle.css'
 
 const ToDo = props => {
+    console.log(props);
     const [taskText, setTaskText] = useState('');
 
     const {
@@ -21,24 +21,26 @@ const ToDo = props => {
             isCompleted: false,
         }
         saveTask(task);
+        setTaskText('')
     }
 
      const handleInput = (event) => {
-        setTaskText(event.target.value)
+        setTaskText(event.target.value)        
      }
 
     return(
         <div className='container'>
-            <h1>ToDo List :)</h1>
+            <h1>ToDo List</h1>
             <div className='container__input-wrapper'>
             <input type="text" 
+                   value = {taskText}
                    onChange = {handleInput}
                    className='input-wrapper__text' 
                    placeholder="Add a task"/>
-            <button className='input-wrapper__add-button'
-                    onClick={handleClick}
-                    children='Add'/>
-                          
+            <button onClick={handleClick}
+                    children='Add'                         
+                    className='input-wrapper__add-button'
+            />                         
         </div>
         <div className='container__list-wrapper'>
             <ul className='list-wrapper__tasks'>
